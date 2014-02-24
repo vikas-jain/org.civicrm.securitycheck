@@ -81,26 +81,7 @@ function securitycheck_civicrm_caseTypes(&$caseTypes) {
 }
 
 /**
- * CMS have a different pattern to their default file path and URL.
  *
- * @TODO This function might be better shared in CRM_Utils_Check
- * class, but that class doesn't yet exist.
- */
-function getFilePathMarker() {
-  $config = CRM_Core_Config::singleton();
-  switch ($config->userFramework) {
-    case 'Joomla':
-      return '/media/';
-    default:
-      return '/files/';
-  }
-}
-
-function createDocUrl($topic) {
-  return CRM_Utils_System::getWikiBaseURL() . $topic;
-}
-/**
- * 
  *Displays Security Error Messages On Civicrm Administrator page
  *
  */
